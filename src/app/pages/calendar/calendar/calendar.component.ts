@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import * as moment from 'moment'
+import * as moment from 'moment';
+import  {RemiderComponent } from '../remider/remider.component';
+
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -7,7 +11,9 @@ import * as moment from 'moment'
 })
 export class CalendarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalService: NgbModal
+  ) { }
 
 
   week = [
@@ -41,7 +47,8 @@ export class CalendarComponent implements OnInit {
       return {
         name: dayObject.format("dddd"),
         value: a,
-        indexWeek: dayObject.isoWeekday()
+        indexWeek: dayObject.isoWeekday(),
+        remiders : [] 
       }
 
     });
@@ -69,7 +76,18 @@ export class CalendarComponent implements OnInit {
     const parse = `${monthYear}-${day.value}`
     const objectDate = moment(parse)
     console.log(objectDate);
+    const modalRef = this.modalService.open(RemiderComponent, { "size": "md", "centered": true });
+    modalRef.componentInstance.day = objectDate;
+    modalRef.result.then(res=>{
+      if(res){
+        console.log("llegaron los cambios",res)
+
+      }
+    })
     
   }
+
+
+  
 
 }

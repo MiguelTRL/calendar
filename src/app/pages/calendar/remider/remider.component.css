@@ -1,0 +1,52 @@
+.cont {
+  height: 437px;
+  padding: 15px;
+}
+
+.tittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef4f69;
+}
+
+textarea {
+  height: 163px;
+  width: 62%;
+}
+
+.app-remider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 21px;
+}
+.btn {
+    border-width: 0;
+    position: relative;
+    border-radius: 10px;
+    width: 113px;
+    background-color: #ef4f69;
+    color: #f5f5f5;
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+}
+
+.btn-cancel{
+    border-width: 0;
+    position: relative;
+    border-radius: 10px;
+    width: 113px;
+    background-color: #c6c2c2;
+    color: black;
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+}
+
+.add-remider{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+}
+.add-btn {
+    margin-left: 10px;
+}
