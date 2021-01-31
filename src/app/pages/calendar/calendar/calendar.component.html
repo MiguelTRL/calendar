@@ -1,0 +1,27 @@
+<section>
+  <div class="main">
+    <div class="custom-calendar-wrap">
+      <div id="custom-inner" class="custom-inner">
+        <div class="custom-header clearfix">
+          <nav>
+            <span id="custom-prev" class="custom-prev" (click)="changueMonth(1)"></span>
+            <span id="custom-next" class="custom-next" (click)="changueMonth(-1)"></span>
+          </nav>
+          <h2 id="custom-month" class="custom-month"> {{dateSelect | date :"MMMM"}}</h2>
+          <h3 id="custom-year" class="custom-year"> {{dateSelect | date :"yyyy"}}</h3>
+        </div>
+        <div id="calendar" class="fc-calendar-container">
+
+          <ol>
+            <li class="dayWeek" *ngFor="let day of week"> {{day}}</li>
+            <li class="day" (click)="addRemider(day)"[style.gridColumnStart]="first? day.indexWeek :'auto'"
+              *ngFor="let day of monthSelect; let first = first">
+              {{day.value}}
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
