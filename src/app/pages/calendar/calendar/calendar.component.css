@@ -75,7 +75,7 @@ section,
   border-radius: 8px;
   padding: 0 5px 50px 5px;
   width: 100%;
-  margin: 0 auto;
+  margin: 10% auto;
   max-width: 660px;
 }
 
@@ -560,4 +560,20 @@ li {
   justify-content: center;
   align-items: center;
   color: red;
+}
+.center-item{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.trash {
+  margin-left: -4px;
+  margin-top: -4px;
+  fill: #000000;
+}
+
+
+.actual-day {
+  border-bottom: 2px solid #ef4f69;
 }

@@ -6,6 +6,7 @@ import { RemiderComponent } from './remider/remider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule,ReactiveFormsModule} from  '@angular/forms'; 
 import { ColorPickerModule } from 'ngx-color-picker';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    MatSelectCountryModule
 
   ]
 })
