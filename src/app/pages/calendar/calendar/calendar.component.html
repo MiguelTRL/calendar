@@ -1,4 +1,6 @@
 <section>
+
+
   <div class="main">
     <div class="custom-calendar-wrap">
       <div id="custom-inner" class="custom-inner">
@@ -7,6 +9,7 @@
             <span id="custom-prev" class="custom-prev" (click)="changueMonth(1)"></span>
             <span id="custom-next" class="custom-next" (click)="changueMonth(-1)"></span>
           </nav>
+          <h3 class="custom-month" > {{actualClime.weather[0].main}}</h3>
           <h2 id="custom-month" class="custom-month"> {{dateSelect | date :"MMMM"}}</h2>
           <h3 id="custom-year" class="custom-year"> {{dateSelect | date :"yyyy"}}</h3>
         </div>

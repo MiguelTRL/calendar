@@ -38,6 +38,8 @@ export class RemiderComponent implements OnInit {
         this.color = this.edit.color,
         this.hour = this.edit.hour
     }
+
+   
   }
 
   cancel() {
